@@ -3,183 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Business Solutions</title>
+  <title>Business Solutions | City of Edmonton</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="assets/edmonton-logo.png" alt="Edmonton Logo" class="edm-logo">
-      <span>Business Solutions</span>
+  <!-- Animated Background -->
+  <div class="background-animation">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+    <div class="floating-shape shape-4"></div>
+  </div>
+
+  <!-- Floating Navbar -->
+  <nav class="floating-navbar">
+    <div class="nav-content">
+      <div class="logo-section">
+        <img src="assets/edmonton-logo.png" alt="Edmonton Logo" class="nav-logo">
+        <span class="nav-title">Business Solutions</span>
+      </div>
+      <div class="nav-right">
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" placeholder="Search..." class="search-input">
+        </div>
+        <button class="nav-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="services.html">Services & Support</a>
-      <a href="links.html">Links</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="faq.html">FAQ</a>
-      <button id="darkModeToggle" class="dark-mode-toggle">
-        <i class="fas fa-moon"></i>
-      </button>
-    </nav>
-  </header>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="hero edmonton-hero">
-    <div class="hero-bg-img" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');"></div>
-    <div class="hero-overlay glass">
-      <h1 class="hero-title main-title">Business Solutions</h1>
-      <p class="hero-tagline">Empowering Edmonton with innovative technology and business support.</p>
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-city"></i>
+        <span>City of Edmonton</span>
+      </div>
+      <h1 class="hero-title">Business Solutions</h1>
+      <p class="hero-description">
+        Empowering Edmonton with innovative technology solutions, streamlined processes, 
+        and data-driven insights to build a smarter, more connected city.
+      </p>
     </div>
   </section>
-  <div class="wave-divider">
-    <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f4f8fb"/></svg>
+
+  <!-- Main Navigation Cards -->
+  <section class="main-cards">
+    <div class="cards-container">
+      <div class="glass-card" data-link="departments">
+        <div class="card-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 class="card-title">Departments</h3>
+        <p class="card-description">Explore our organizational structure and team divisions</p>
+        <div class="card-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="glass-card" data-link="what-we-do">
+        <div class="card-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3 class="card-title">What We Do</h3>
+        <p class="card-description">Discover our services, solutions, and capabilities</p>
+        <div class="card-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="glass-card" data-link="portfolios">
+        <div class="card-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3 class="card-title">Project Portfolios</h3>
+        <p class="card-description">View our current projects and success stories</p>
+        <div class="card-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Chatbot Widget -->
+  <div class="chatbot-widget">
+    <div class="chatbot-button" id="chatbotToggle">
+      <i class="fas fa-robot"></i>
+    </div>
+    <div class="chatbot-panel" id="chatbotPanel">
+      <div class="chatbot-header">
+        <div class="chatbot-title">
+          <i class="fas fa-brain"></i>
+          <span>AI Assistant</span>
+        </div>
+        <button class="chatbot-close" id="chatbotClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chatbot-messages">
+        <div class="bot-message">
+          <div class="message-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="message-content">
+            Hello! I'm your AI assistant. How can I help you navigate our Business Solutions services today?
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" placeholder="Ask me anything..." class="chat-input">
+        <button class="chat-send">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
   </div>
 
-  <!-- Feature Highlight Strip -->
-  <section class="feature-strip">
-    <div class="feature">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f680.svg" alt="Rocket" class="feature-icon">
-      <span>Lightning-fast Solutions</span>
-    </div>
-    <div class="feature">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4bb.svg" alt="Tech" class="feature-icon">
-      <span>Modern Technology</span>
-    </div>
-    <div class="feature">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f465.svg" alt="Team" class="feature-icon">
-      <span>Expert Teamwork</span>
-    </div>
-    <div class="feature">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c8.svg" alt="Growth" class="feature-icon">
-      <span>Data-Driven Growth</span>
-    </div>
-  </section>
-
-  <!-- Who We Are -->
-  <section id="who" class="about glass section-bg">
-    <h2 class="section-title"><i class="fas fa-users"></i> Who We Are</h2>
-    <div class="about-cards">
-      <div class="about-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4bb.svg" alt="IT Solutions" class="about-icon">
-        <h3>IT Business Solutions</h3>
-        <p>We provide a comprehensive range of software, applications, programs, and services designed to help achieve business goals and overcome specific challenges.</p>
-      </div>
-      <div class="about-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c8.svg" alt="Business Support" class="about-icon">
-        <h3>Business Support</h3>
-        <p>Our solutions are tailored to support different business areas and aspects of their operations, helping streamline processes and drive efficiency.</p>
-      </div>
-      <div class="about-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4e6.svg" alt="Organization" class="about-icon">
-        <h3>Our Organization</h3>
-        <p>We are part of Open City and Technology, which comes under Financial and Corporate Services, working together to empower Edmonton with innovative solutions.</p>
-      </div>
-    </div>
-  </section>
-  <div class="wave-divider flip">
-    <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z" fill="#e3eaf2"/></svg>
-  </div>
-
-  <!-- What We Do -->
-  <section class="what-we-do glass section-bg">
-    <h2 class="section-title"><i class="fas fa-bolt"></i> What We Do</h2>
-    <div class="what-cards">
-      <div class="what-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4a1.svg" alt="Innovation" class="what-img">
-        <h3>Innovate</h3>
-        <p>We empower our business partners by rapidly delivering innovative and sustainable technology solutions built on a shared architectural foundation, reducing technical debt and maximizing resource efficiency.</p>
-      </div>
-      <div class="what-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f527.svg" alt="Support" class="what-img">
-        <h3>Support</h3>
-        <p>24/7 support and monitoring for essential applications, ensuring reliability and future-readiness.</p>
-      </div>
-      <div class="what-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4b8.svg" alt="Optimize" class="what-img">
-        <h3>Optimize</h3>
-        <p>Strategically aligning with financial plans while maximizing efficiency and streamlining business workflows.</p>
-      </div>
-    </div>
-  </section>
-  <div class="wave-divider">
-    <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f4f8fb"/></svg>
-  </div>
-
-  <!-- Our Teams -->
-  <section class="our-teams glass section-bg">
-    <h2 class="section-title"><i class="fas fa-people-group"></i> Our Teams</h2>
-    <div class="team-cards">
-      <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=200&q=80" alt="Gregory Simon's Team" class="team-img-small">
-        <h3>Gregory Simon's Team</h3>
-        <ul>
-          <li>Application Lifecycle Management – Overseeing assessment, development, and maintenance.</li>
-          <li>Upgrades & Enhancements – Implementing bug fixes, performance & security updates, and new features.</li>
-          <li>Technical Resource Allocation – Assigning experts to critical projects and balancing workloads.</li>
-          <li>Budget & Resource Optimization – Strategically aligning with financial plans while maximizing efficiency.</li>
-          <li>24/7 Support & Monitoring – Ensuring uninterrupted performance for essential applications.</li>
-        </ul>
-        <p>This team plays a vital role in ensuring applications stay reliable, efficient, and future-ready.</p>
-      </div>
-      <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="CAD Team" class="team-img-small">
-        <h3>Computer Automated Dispatch (CAD)</h3>
-        <ul>
-          <li>System Management & Maintenance: Installing updates, troubleshooting software issues, and ensuring data integrity. Managing integrations with GPS, mapping, and other emergency response systems.</li>
-          <li>Customization & Optimization: Tailoring CAD systems to the specific needs of police, fire, and emergency services. Designing call prioritization rules, automated workflows, and incident templates for faster response times.</li>
-          <li>Training & Technical Support: Conducting training sessions and developing resources for dispatchers. Providing real-time troubleshooting and ongoing support to ensure system proficiency.</li>
-        </ul>
-        <p>With advanced CAD solutions, we empower dispatch teams to respond faster, smarter, and more effectively.</p>
-      </div>
-      <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=200&q=80" alt="RDS Team" class="team-img-small">
-        <h3>Rapid Development Services (RDS)</h3>
-        <ul>
-          <li>Faster Development Cycles – Build robust apps in weeks, not months.</li>
-          <li>Cost-Effective Solutions – Custom functionality without excessive overhead.</li>
-          <li>Seamless Integration – Connect systems, automate workflows, and enhance efficiency.</li>
-          <li>User-Centric Design – Intuitive, modern applications tailored to your needs.</li>
-        </ul>
-        <p>From streamlining business workflows to deploying captivating applications, RDS unlocks your organization's full potential—at lightning speed.</p>
-        <p>Leverage our expertise in automation, app development, and process optimization to drive success faster than ever before. Let's build the future, together.</p>
-      </div>
-    </div>
-  </section>
-  <div class="wave-divider flip">
-    <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z" fill="#e3eaf2"/></svg>
-  </div>
-
-  <!-- Testimonial/Quote Card -->
-  <section class="testimonial glass section-bg">
-    <h2 class="section-title"><i class="fas fa-quote-left"></i> What Our Partners Say</h2>
-    <div class="testimonial-content">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="testimonial-img-small">
-      <blockquote>“Business Solutions helped us transform our workflows and deliver results faster than ever. The team is innovative, responsive, and truly cares about our success.”</blockquote>
-      <span class="testimonial-author">— City of Edmonton Partner</span>
-    </div>
-  </section>
-
-  <!-- Org Chart -->
-  <section class="org-chart glass section-bg">
-    <h2 class="section-title"><i class="fas fa-sitemap"></i> Business Solutions Org Chart</h2>
-    <iframe src="https://script.google.com/a/edmonton.ca/macros/s/AKfycbzRmWOi755lq-2j7vW2Q2gmSHLAQ1tGOnrRfnOHUw/exec?collapse=2&isEmbedded=true&sheetsID=1nNEayob8ej0mkSltA4NtW4xye0Tw0Mg8hRncAIrCYOg&theme=dark" width="100%" height="600" style="border:none;border-radius:16px;box-shadow:0 4px 32px rgba(0,0,0,0.2);"></iframe>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div>© 2025 City of Edmonton | Business Solutions</div>
-    <div class="footer-links">
-      <a href="index.html">Business Solutions</a>
-      <a href="#">Open City & Technology</a>
-      <a href="#">Financial & Corporate Services</a>
-    </div>
-  </footer>
   <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
-</html> 
+</html>
